@@ -49,7 +49,6 @@ Built as a real-world alternative to expensive content agencies and generic AI w
 ### Why This Architecture?
 - **Only 1 agent has search tools** — eliminates token overflow and tool call errors
 - **Writer works from context** — faster, more focused output
-- **2 different LLM providers** — spreads rate limits across Groq + Together AI
 - **Pydantic output enforcement** — structured JSON every single time
 
 ---
@@ -60,7 +59,7 @@ Built as a real-world alternative to expensive content agencies and generic AI w
 |---|---|
 | Agent Framework | CrewAI 1.14 |
 | LLM (Research + Review) | Groq — LLaMA 3.3 70b Versatile |
-| LLM (Writing) | Together AI — Mixtral 8x7B Instruct |
+| LLM (Writing) | Groq — LLaMA 3.3 70b Versatile|
 | Web Search | Serper API |
 | Backend API | FastAPI |
 | Frontend | Streamlit |
@@ -120,7 +119,6 @@ Create a `.env` file:
 ```env
 GROQ_API_KEY=your_groq_api_key
 SERPER_API_KEY=your_serper_api_key
-TOGETHER_API_KEY=your_together_api_key
 OPENAI_API_KEY=sk-fake-not-needed-123
 ```
 
@@ -128,7 +126,6 @@ OPENAI_API_KEY=sk-fake-not-needed-123
 |---|---|---|
 | GROQ_API_KEY | console.groq.com | Free |
 | SERPER_API_KEY | serper.dev | Free (2500/month) |
-| TOGETHER_API_KEY | api.together.ai | Free tier available |
 
 ### 5. Run the system
 
