@@ -1,0 +1,14 @@
+venv/
+311venv/
+venv311/
+__pycache__/
+*.pyc
+.env
+*.db
+logs/
+.chroma/
+*.egg-info/
+.crewai/
+agents/
+tasks/
+tools/
