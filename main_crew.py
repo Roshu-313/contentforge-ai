@@ -39,8 +39,13 @@ def run_content_crew(subject: str) -> ContentOutput:
 
     researcher = Agent(
         role="Senior Research Analyst",
-        goal=f"Research latest info about {subject} using search tool.",
-        backstory="Expert researcher. Uses search tool to find real information.",
+        goal=f"Research the latest news, trends, and data about {subject}. "
+             f"Provide a comprehensive research report covering key news, "
+             f"market trends, statistics, and SEO keywords.",
+        backstory="You are an expert researcher and market analyst. "
+                  "You search the web efficiently, extract the most "
+                  "relevant information, and produce clear research briefs "
+                  "that writers can use directly.",
         tools=[search_tool],
         llm=llm_researcher,
         allow_delegation=False,
@@ -49,9 +54,15 @@ def run_content_crew(subject: str) -> ContentOutput:
     )
 
     writer = Agent(
-        role="Expert Content Writer",
-        goal=f"Write engaging content about {subject} using provided research.",
-        backstory="World class content writer. Uses only the research given.",
+        role="Expert Content Writer and SEO Strategist",
+        goal=f"Using the research provided, write a complete content package "
+             f"about {subject}: a full SEO-optimized blog post in markdown "
+             f"plus LinkedIn, Twitter, and Instagram posts.",
+        backstory="You are a world-class content writer who blends SEO "
+                  "expertise with compelling storytelling. You write "
+                  "blog posts that rank on Google and social posts that "
+                  "get engagement. You never need to search — you work "
+                  "from the research given to you.",
         llm=llm_writer,
         allow_delegation=False,
         verbose=True,
@@ -59,9 +70,13 @@ def run_content_crew(subject: str) -> ContentOutput:
     )
 
     reviewer = Agent(
-        role="Content Reviewer",
-        goal="Review and return the final structured content output.",
-        backstory="Quality reviewer who formats output properly.",
+        role="Chief Content Officer",
+        goal="Review the content package and return it as a perfectly "
+             "structured output with the article and all social media posts.",
+        backstory="You are the final quality gate. You ensure the content "
+                  "is well-formatted in markdown, the social posts match "
+                  "their platforms, and everything is structured correctly "
+                  "for the API response.",
         llm=llm_reviewer,
         allow_delegation=False,
         verbose=True,
