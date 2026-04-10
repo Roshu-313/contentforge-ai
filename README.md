@@ -4,7 +4,6 @@
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://python.org)
 [![CrewAI](https://img.shields.io/badge/CrewAI-1.14-green)](https://crewai.com)
 [![Groq](https://img.shields.io/badge/LLM-Groq%20LLaMA%203.3-orange)](https://groq.com)
-[![Together AI](https://img.shields.io/badge/LLM-Together%20AI%20Mixtral-purple)](https://together.ai)
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-teal)](https://fastapi.tiangolo.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
@@ -44,7 +43,7 @@ Built as a real-world alternative to expensive content agencies and generic AI w
 | Agent | Model | Role | Tools |
 |---|---|---|---|
 | Senior Research Analyst | Groq LLaMA 3.3 70b | Searches web, gathers news + trends | SerperDevTool ✅ |
-| Expert Content Writer | Together AI Mixtral 8x7b | Writes blog post + social media posts | None ❌ |
+| Expert Content Writer | Groq LLaMA 3.3 70b| Writes blog post + social media posts | None ❌ |
 | Chief Content Officer | Groq LLaMA 3.3 70b | Reviews and returns structured output | None ❌ |
 
 ### Why This Architecture?
