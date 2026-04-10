@@ -14,8 +14,7 @@ st.caption("Autonomous Multi-Agent Content Intelligence System")
 st.markdown("---")
 
 # ─── API URL — works locally and on cloud ─────────────────────────────────
-API_URL = os.getenv("API_URL", "https://web-production-dccd2.up.railway.app")
-
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 # ─── Tabs ─────────────────────────────────────────────────────────────────
 tab1, tab2 = st.tabs(["🚀 Generate Content", "📚 Content History"])
 
